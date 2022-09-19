@@ -991,10 +991,13 @@ def Main():
 
 
 
-print(f"This is {Fore.GREEN}color{Style.RESET_ALL}!")
 gameRunning = True
 while gameRunning:
-    result = ChooseDestination(["Begin", "Settings", "End game"], ["begin", "settings", "end game"], "Where do you want to go? ", "It must be one of the 3 options above, sorry. Where do you want to go? ")
+    result = ChooseDestination([f"{Fore.RED}B{Fore.MAGENTA}e{Fore.YELLOW}g{Fore.GREEN}i{Fore.BLUE}n{Style.RESET_ALL}",\
+        f"{Fore.BLACK}S{Fore.WHITE}e{Fore.BLACK}t{Fore.WHITE}t{Fore.BLACK}i{Fore.WHITE}n{Fore.BLACK}g{Fore.WHITE}s{Style.RESET_ALL}",\
+            f"{Fore.RED}E{Fore.MAGENTA}n{Fore.RED}d {Fore.MAGENTA}g{Fore.RED}a{Fore.MAGENTA}m{Fore.RED}e{Style.RESET_ALL}"],\
+                ["begin", "settings", "end game"], "Where do you want to go? ",\
+                    "It must be one of the 3 options above, sorry. Where do you want to go? ")
     if result == "begin":
         Main()
     elif result == "settings":
